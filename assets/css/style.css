@@ -1,0 +1,7 @@
+.disciplina-box {
+	background: blue;
+	margin: 0.5rem;
+	min-height: 6rem;
+	padding-top: 2rem;
+	text-align: center;
+}

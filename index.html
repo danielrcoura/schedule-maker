@@ -16,8 +16,12 @@
 <body ng-app="scheduleMakerApp">
 <div ng-controller="controller" class="container">
 	<div class="row">
-		<h1>{{title}}</h1>
-		
+		<h1>Schedule Maker - Computer Science - UFCG</h1>
+	</div>
+	<div class="row">
+		<div ng-repeat="disciplina in disciplinas" class="col-lg-2 disciplina-box">
+			<p>{{disciplina | uppercase}}</p>
+		</div>
 	</div>
 </div>
 </body>
