@@ -27,4 +27,7 @@ scheduleMaker.controller('controller', function($scope, $http){
 			console.log(error);
 		});
 	}
+
+	$scope.selectDiscipline = function (discipline) {
+		discipline.selected = !discipline.selected;	}
 });

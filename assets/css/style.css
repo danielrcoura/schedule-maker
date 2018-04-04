@@ -1,7 +1,12 @@
 .disciplina-box {
 	background: blue;
+	color: white;
 	margin: 0.5rem;
 	min-height: 6rem;
 	padding-top: 2rem;
 	text-align: center;
+}
+
+.selected {
+	background: black;
 }

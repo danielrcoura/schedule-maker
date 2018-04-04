@@ -19,8 +19,9 @@
 		<h1>Schedule Maker - Computer Science - UFCG</h1>
 	</div>
 	<div class="row">
-		<div ng-repeat="disciplina in disciplinas" class="col-lg-2 disciplina-box">
-			<p>{{disciplina | uppercase}}</p>
+		<div class="col-lg-2 disciplina-box" ng-class="{selected: disciplina.selected}"
+			ng-repeat="disciplina in disciplinas" ng-click="selectDiscipline(disciplina)">
+			<p>{{disciplina.name | uppercase}}</p>
 		</div>
 	</div>
 </div>
