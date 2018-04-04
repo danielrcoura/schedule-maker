@@ -1,0 +1,22 @@
+{
+  "name": "schedule-maker",
+  "homepage": "https://github.com/danielrcoura/schedule-maker",
+  "authors": [
+    "danielrcoura <daniel.coura@ccc.ufcg.edu.br>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0"
+  }
+}
