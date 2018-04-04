@@ -3,12 +3,10 @@ import json
 arq = open('../assets/horarios.json', 'r').read()
 horarios = json.loads(arq)
 
-disciplinas = []
+disciplinas = {}
 
 for horario in horarios:
-    if ({'selected': False, 'name': horario['nome']} not in disciplinas):
-        disciplinas.append(
-            {'selected': False, 'name': horario['nome']})
+    disciplinas[horario['nome']] = {'selected': False, 'turma': 1}
 
 arq = open('../assets/disciplinas.json', 'w')
 arq.writelines(json.dumps(disciplinas))

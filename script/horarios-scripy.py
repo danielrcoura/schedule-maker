@@ -19,9 +19,10 @@ for line in range(2, len(matriz)):
         disc_id = matriz[line][col]
         if (regTurma.search(disc_id)):
             disc['nome'] = disc_id[0:-3]
-            disc['turma'] = disc_id[len(disc_id) - 2:len(disc_id)]
+            disc['turma'] = disc_id[-1]
         else:
             disc['nome'] = disc_id
+            disc['turma'] = 1
 
         disc['sala'] = matriz[line][col - 1]
         disc['professor'] = matriz[line][col + 1]
@@ -55,6 +56,6 @@ for line in range(2, len(matriz)):
 
         disciplinas.append(disc)
 
-arq = open('disciplinas.json', 'w')
+arq = open('../assets/horarios.json', 'w')
 arq.writelines(json.dumps(disciplinas))
 arq.close()

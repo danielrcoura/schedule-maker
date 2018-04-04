@@ -3,6 +3,8 @@ var scheduleMaker = angular.module("scheduleMakerApp", []);
 scheduleMaker.controller('controller', function($scope, $http){
 	var URL = 'http://127.0.0.1:8000';
 	$scope.disciplinas;
+	$scope.selecionadas;
+	$scope.horariosSelecionados;
 
 	var horarios;
 	getHorarios();
@@ -29,5 +31,21 @@ scheduleMaker.controller('controller', function($scope, $http){
 	}
 
 	$scope.selectDiscipline = function (discipline) {
-		discipline.selected = !discipline.selected;	}
+		$scope.disciplinas[discipline].selected = !$scope.disciplinas[discipline].selected;
+		getDisciplinasSelecionadas();
+	}
+
+	function getDisciplinasSelecionadas() {
+		$scope.horariosSelecionados =  horarios.filter(function (disc) {
+			if ($scope.disciplinas[disc['nome']].selected)  {
+				return disc;
+			}
+		})
+	}
+
+	$scope.setTurma = function (disciplina) {
+		disciplina.turma += 1;
+		console.log(disciplina.turma);
+	}
+
 });
